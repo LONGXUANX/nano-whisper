@@ -5,6 +5,21 @@ Now available for whisper
 
 At present, the whole project does not rely on any interfaces and data structures of vLLM, and the code size is only 2000+
 
+## Pre-Requisites
+You must have NVIDIA GPUs to run the codes.
+
+The implementation codes are developed and tested with the following environment setups:
+- CUDA
+- pip install python
+- pip install pytorch
+- pip install flash-attn
+- pip transformers
+- A piece of audio
+- whisper model(0.8B or 1.5B or whatever)
+```bash
+python nano_whisper.py
+```
+
 ## Performance
 #### condition
 1. [✅] 0.8B
