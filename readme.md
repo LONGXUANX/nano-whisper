@@ -13,9 +13,9 @@ The implementation codes are developed and tested with the following environment
 - pip install python
 - pip install pytorch
 - pip install flash-attn
-- pip transformers
+- pip install transformers
 - A piece of audio
-- whisper model(0.8B or 1.5B or whatever)
+- whisper model (0.8B or 1.5B or whatever)
 ```bash
 python nano_whisper.py
 ```
