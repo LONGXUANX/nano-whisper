@@ -5,12 +5,12 @@ Now available for whisper
 
 At present, the whole project does not rely on any interfaces and data structures of vLLM, and the code size is only 2000+
 
-## 引擎性能
-#### 测试条件
+## Performance
+#### condition
 1. [✅] 0.8B
-2. [✅] 音频时长6s
-3. [✅] mel编码时长以10ms计
-4. [✅] A100单卡测试
+2. [✅] 6s audio
+3. [✅] The mel encoding time is measured in 10ms
+4. [✅] A100 single GPU test
 
 | requests | 1       | 16      | 32      | 64      | 128     | 256     |
 |----------|---------|---------|---------|---------|---------|---------|
@@ -19,24 +19,24 @@ At present, the whole project does not rely on any interfaces and data structure
 | nanowhisper eager | 0.190/0.190 | 1.854/0.115 | 2.347/0.073 | 3.394/0.053 | 4.705/0.036 | 7.630/0.030 |
 | nanowhisper cuda graph | 0.090/0.090 | 1.113/0.069 | 0.867/0.027 | 2.702/0.042 | 4.983/0.039 | 8.192/0.032 |
 
-*单位：seconds*
+*seconds*
 
-#### 不同数量请求预热效果（主要原因为部分显存为torch管理）
+#### Different number of requests for warming up effects (mainly due to the fact that some memory is managed by torch)
 
-##### 1 请求预热
+##### 1 Request warm up
 
 | requests | 1       | 16      | 32      | 64      | 128     | 256     |
 |----------|---------|---------|---------|---------|---------|---------|
 | nanowhisper eager | 0.190/0.190 | 1.854/0.115 | 2.347/0.073 | 3.394/0.053 | 4.705/0.036 | 7.630/0.030 |
 | nanowhisper cuda graph | 0.090/0.090 | 1.113/0.069 | 0.867/0.027 | 2.702/0.042 | 4.983/0.039 | 8.192/0.032 |
 
-*单位：seconds*
+*seconds*
 
-##### 256 请求预热
+##### 256 Requests warm up
 
 | requests | 1       | 16      | 32      | 64      | 128     | 256     |
 |----------|---------|---------|---------|---------|---------|---------|
 | nanowhisper eager | 0.195/0.195 | 1.367/0.085 | 1.196/0.037 | 2.735/0.043 | 3.728/0.029 | 6.772/0.026 |
 | nanowhisper cuda graph | 0.084/0.084 | 1.106/0.069 | 0.861/0.027 | 2.705/0.042 | 3.708/0.028 | 6.985/0.027 |
 
-*单位：seconds*
+*seconds*
