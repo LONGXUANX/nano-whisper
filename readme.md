@@ -1,5 +1,5 @@
 # nano-whisper
-nano-whisper is an inference engine that supports cross-attention encoder-decoder model and benchmarking vLLM & CTranslate2 with non-redundant code
+nano-whisper is an inference engine that supports cross-attention encoder-decoder model and benchmarking vLLM & CTranslate2((Fater-whisper)) with non-redundant code
 
 Now available for whisper
 
@@ -14,6 +14,7 @@ The implementation codes are developed and tested with the following environment
 - pip install pytorch
 - pip install flash-attn
 - pip install transformers
+- pip install triton
 - A piece of audio
 - whisper model (0.8B or 1.5B or whatever)
 ```bash
@@ -29,7 +30,7 @@ python nano_whisper.py
 
 | requests | 1       | 16      | 32      | 64      | 128     | 256     |
 |----------|---------|---------|---------|---------|---------|---------|
-| CTranslate2 | 0.130/0.130 | -/0.130 | -/0.130 | -/0.130 | -/0.130 | -/0.130 |
+| CTranslate2(Fater-whisper) | 0.130/0.130 | -/0.130 | -/0.130 | -/0.130 | -/0.130 | -/0.130 |
 | vLLM | 0.205/0.205 | 2.215/0.138 | 2.488/0.077 | 4.708/0.074 | 6.048/0.047 | 8.624/0.033 |
 | nanowhisper eager | 0.190/0.190 | 1.854/0.115 | 2.347/0.073 | 3.394/0.053 | 4.705/0.036 | 7.630/0.030 |
 | nanowhisper cuda graph | 0.090/0.090 | 1.113/0.069 | 0.867/0.027 | 2.702/0.042 | 4.983/0.039 | 8.192/0.032 |
